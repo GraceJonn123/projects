@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Kitty</title>
+      <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/main.css">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  </head>
+  <body>
+    <div class="bowdi">
+      <div class="row-content">
+        <div class="medium-6">
+    <div class="nav">
+  <nav>
+    <ul>
+<a href="#home">Home</a>
+<a href="#about">About Kitty</a>
+<a href="#contacts">Contact Info</a>
+    </ul>
+    </div>
+    <div class="header">
+      <section>Kitty-Kat</section>
+  </div>
+  </nav>
+</div>
+  <div class="text">
+    <p>ADOPT A KITTY TODAY.</p>
+    <h4>Finding the Right Pet for You.</h4>
+  <p>People have a good idea of what they are looking for, and chances are you do too.
+</br>Before digging into KittyKat to search for the pet of your dreams, do your research.
+  </br>Out there is a pet who will fit perfectly into your lifestyle.</p>
+    <p>Register here to adopt a kitty or visit our pet store <a href="https://www.google.com/maps/place/Cat+Connection+Inc./@32.9416908,-96.8290918,17z/data=!3m1!4b1!4m2!3m1!1s0x864c2128e0dce36b:0x379a10266549f468">here</a>. Thank you!</p>
+</div>
+<div class="large-6, medium-3, small-1 columns">
+
+  <div class="info">
+<div id="about">
+  <section>The Kitty-Kat Foundation is an independent nonprofit organization that supports the </br>
+    shelters and rescue groups that post their adoptable pet cats on KittyKat.bitballoon.com. </br>
+    Our mission is to help ensure that no cat is euthanized for lack of a home.</br>
+    For any enquiries, fill i the form and add a note saying your mind at KittyKat.bitballoon.com.</section>
+</div>
+  </div>
+  <div class="form">
+    <input type='text' id='nameInput' placeholder='Name'></br>
+    <input type='text' id='messageInput' placeholder='Message'></br>
+    <input type="text" id="ageInput" placeholder="age"></br>
+    <script>
+      var myDataRef = new Firebase('https://kitten-pu.firebaseIO.com/');
+      $('#ageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          var age = $('#ageInput').val();
+myDataRef.push('User ' + name + ' says ' + text + 'and is ' + age + ' years of age.');
+          $('#messageInput').val('');
+        }
+      });
+    </script>
+  </div>
+  </div>
+</div>
+  </body>
+</html>
