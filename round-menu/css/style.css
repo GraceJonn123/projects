@@ -1,0 +1,196 @@
+body {
+  background: rgb(174, 182, 187);
+  overflow: hidden;
+  font-family: 'Icons';
+  font-size: 1rem;
+  color: #FFF;
+  text-align: center;
+  line-height: normal;
+  
+  -webkit-font-smoothing: antialiased;
+}
+::selection {
+  background: transparent;
+}
+@font-face {
+    font-family: 'Icons';
+    src: url('http://goo.gl/5iCAe');
+}
+#drop_down {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  display: block;
+}
+#drop_down li .button {
+  cursor: pointer;
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  background: rgb(174, 182, 187);
+  display: block;
+  z-index: 10;
+  overflow: hidden;
+  box-shadow:         0 0 0 .1rem rgba(255, 255, 255, .3),
+                      0 -.3rem .3rem .1rem rgba(255, 255, 255, .3),
+                      0 .3rem .3rem .1rem rgba(0, 0, 0, .3);
+  -o-box-shadow:      0 0 0 .1rem rgba(255, 255, 255, .3),
+                      0 -.3rem .3rem .1rem rgba(255, 255, 255, .3),
+                      0 .3rem .3rem .1rem rgba(0, 0, 0, .3);
+  -moz-box-shadow:    0 0 0 .1rem rgba(255, 255, 255, .3),
+                      0 -.3rem .3rem .1rem rgba(255, 255, 255, .3),
+                      0 .3rem .3rem .1rem rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 0 .1rem rgba(255, 255, 255, .3),
+                      0 -.3rem .3rem .1rem rgba(255, 255, 255, .3),
+                      0 .3rem .3rem .1rem rgba(0, 0, 0, .3);
+  transition:         .3s ease;
+  -o-transition:      .3s ease;
+  -moz-transition:    .3s ease;
+  -webkit-transition: .3s ease;
+  font-size: 300%;
+  line-height: 4.2rem;
+}
+#drop_down li .button:active {
+  box-shadow:         0 0 0 .1rem rgba(255, 255, 255, .3),
+                      0 .3rem .3rem .1rem rgba(255, 255, 255, .3),
+                      0 -.3rem .3rem .1rem rgba(0, 0, 0, .3);
+  -o-box-shadow:      0 0 0 .1rem rgba(255, 255, 255, .3),
+                      0 .3rem .3rem .1rem rgba(255, 255, 255, .3),
+                      0 -.3rem .3rem .1rem rgba(0, 0, 0, .3);
+  -moz-box-shadow:    0 0 0 .1rem rgba(255, 255, 255, .3),
+                      0 .3rem .3rem .1rem rgba(255, 255, 255, .3),
+                      0 -.3rem .3rem .1rem rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 0 .1rem rgba(255, 255, 255, .3),
+                      0 .3rem .3rem .1rem rgba(255, 255, 255, .3),
+                      0 -.3rem .3rem .1rem rgba(0, 0, 0, .3);
+}
+#drop_down li .button span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: rgb(147, 163, 164);
+  text-shadow: 0 -.1rem 0 rgb(107, 121, 122),
+               0 .1rem 0 rgb(231, 236, 237);
+}
+#drop_down li .button .close {
+  display: none;
+}
+#drop_down li ol {
+  display: block;
+}
+#drop_down li ol li {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 3rem;
+  margin: auto;
+  border-radius: 100%;
+  display: block;
+  z-index: 0;
+  opacity: 0;
+  transition:         background .3s ease;
+  -o-transition:      background .3s ease;
+  -moz-transition:    background .3s ease;
+  -webkit-transition: background .3s ease;
+  font-size: 150%;
+  line-height: 3.2rem;
+  text-shadow: 0 -.1rem 0 rgba(0, 0, 0, .3);
+}
+#drop_down li ol li.home {
+  background: rgb(0, 175, 140);
+}
+#drop_down li ol li.home:hover {
+  background: rgb(0, 144, 115);
+}
+#drop_down li ol li.share {
+  background: rgb(19, 194, 96);
+}
+#drop_down li ol li.share:hover {
+  background: rgb(17, 159, 79);
+}
+#drop_down li ol li.share span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  z-index: 2;
+}
+#drop_down li ol li.share .share-close {
+  display: none;
+}
+#drop_down li ol li.share ol li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 2rem;
+  height: 2rem;
+  margin: auto;
+  display: block;
+  z-index: 1;
+  opacity: 0;
+  font-size: 100%;
+  line-height: 2.3rem;
+}
+#drop_down li ol li.share ol li.share-facebook {
+  background: #3B5998;
+}
+#drop_down li ol li.share ol li.share-twitter {
+  background: #33CCFF;
+}
+#drop_down li ol li.share ol li.share-mail {
+  background: #333;
+}
+#drop_down li ol li.news {
+  background: rgb(245, 182, 0);
+}
+#drop_down li ol li.news:hover {
+  background: rgb(248, 136, 0);
+}
+#drop_down li ol li.twitter {
+  background: rgb(231, 104, 18);
+}
+#drop_down li ol li.twitter:hover {
+  background: rgb(208, 63, 0);
+}
+#drop_down li ol li.mail {
+  background: rgb(0, 135, 211);
+}
+#drop_down li ol li.mail:hover {
+  background: rgb(0, 110, 171);
+}
+#drop_down li ol li.facebook {
+  background: rgb(233, 54, 40);
+}
+#drop_down li ol li.facebook:hover {
+  background: rgb(185, 39, 27);
+}
+#drop_down li ol li.about {
+  background: rgb(137, 70, 167);
+}
+#drop_down li ol li.about:hover {
+  background: rgb(123, 51, 157);
+}
+#drop_down li ol li.map {
+  background: rgb(36, 57, 76);
+}
+#drop_down li ol li.map:hover {
+  background: rgb(31, 48, 63);
+}
